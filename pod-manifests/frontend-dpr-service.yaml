@@ -6,7 +6,7 @@ metadata:
   name: dpr-mockup
 spec:
   containers:
-    - image: fanoftal2/dpr:0.1
+    - image: fanoftal2/dpr:1
       name: dpr-mockup
       ports:
         - containerPort: 5000
