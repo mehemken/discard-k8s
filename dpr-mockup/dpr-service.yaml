@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: dpr-service
+  labels:
+    app: dpr-mockup
+spec:
+  type: LoadBalancer  #Make public
+  ports:
+  - port: 80
+    targetPort: 8080
+  selector:
+    app: dpr-mockup
+
