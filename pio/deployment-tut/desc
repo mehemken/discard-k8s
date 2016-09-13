@@ -1,0 +1,16 @@
+---
+fingerprint: Ta36tCQO_FDLdAziZCui1w==
+id: '2439968818629998170'
+insertTime: '2016-09-11T14:12:21.525-07:00'
+manifest: manifest-1473628341530
+name: my-first-deployment
+operation:
+  endTime: '2016-09-11T14:13:02.835-07:00'
+  name: operation-1473628341287-53c41d5d0385c-c994fd97-b5739145
+  operationType: insert
+  progress: 100
+  startTime: '2016-09-11T14:12:21.659-07:00'
+  status: DONE
+  user: mehemken@gmail.com
+NAME                    TYPE                 STATE      INTENT
+vm-my-first-deployment  compute.v1.instance  COMPLETED

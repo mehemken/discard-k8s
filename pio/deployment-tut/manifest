@@ -1,0 +1,48 @@
+config:
+  content: |
+    resources:
+    - type: compute.v1.instance
+      name: vm-my-first-deployment
+      properties:
+        zone: us-west1-b
+        machineType: https://www.googleapis.com/compute/v1/projects/pioml-141022/zones/us-west1-b/machineTypes/f1-micro
+        disks:
+        - deviceName: boot
+          type: PERSISTENT
+          boot: true
+          autoDelete: true
+          initializeParams:
+            sourceImage: https://www.googleapis.com/compute/v1/projects/debian-cloud/global/images/debian-8-jessie-v20160301
+        networkInterfaces:
+        - network: https://www.googleapis.com/compute/v1/projects/pioml-141022/global/networks/default
+          # Access Config required to give the instance a public IP address
+          accessConfigs:
+          - name: External NAT
+            type: ONE_TO_ONE_NAT
+expandedConfig: |
+  resources:
+  - name: vm-my-first-deployment
+    properties:
+      disks:
+      - autoDelete: true
+        boot: true
+        deviceName: boot
+        initializeParams:
+          sourceImage: https://www.googleapis.com/compute/v1/projects/debian-cloud/global/images/debian-8-jessie-v20160301
+        type: PERSISTENT
+      machineType: https://www.googleapis.com/compute/v1/projects/pioml-141022/zones/us-west1-b/machineTypes/f1-micro
+      networkInterfaces:
+      - accessConfigs:
+        - name: External NAT
+          type: ONE_TO_ONE_NAT
+        network: https://www.googleapis.com/compute/v1/projects/pioml-141022/global/networks/default
+      zone: us-west1-b
+    type: compute.v1.instance
+id: '1147197187386013274'
+insertTime: '2016-09-11T14:12:21.533-07:00'
+layout: |
+  resources:
+  - name: vm-my-first-deployment
+    type: compute.v1.instance
+name: manifest-1473628341530
+selfLink: https://www.googleapis.com/deploymentmanager/v2/projects/pioml-141022/global/deployments/my-first-deployment/manifests/manifest-1473628341530

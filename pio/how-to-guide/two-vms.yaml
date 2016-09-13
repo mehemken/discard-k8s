@@ -1,0 +1,40 @@
+# This creates two identical vms (except for the name)
+# I'm still working on how to allow public http access.
+# See tutorial at (https://cloud.google.com/deployment-manager/step-by-step-guide/create-a-configuration)
+
+
+resources:
+  - name: the-first-vm
+    type: compute.v1.instance
+    properties:
+      zone: us-west1-b
+      machineType: https://[SOME LONG URI]
+      disks:
+        - deviceName: boot
+          type: PERSISTENT
+          boot: true
+          autoDelete: true
+          initializeParams:
+            sourceImage: https://[SOME LONG URI]
+      networkInterfaces:
+        - network: https://[SOME LONG URI]
+          accessConfigs:
+            - name: External NAT
+              type: ONE_TO_ONE_NAT
+  - name: the-second-vm
+    type: compute.v1.instance
+    properties:
+      zone: us-west1-b
+      machineType: https://[SOME LONG URI]
+      disks:
+        - deviceName: boot
+          type: PERSISTENT
+          boot: true
+          autoDelete: true
+          initializeParams:
+            sourceImage: https://[SOME LONG URI]
+      networkInterfaces:
+        - network: https://[SOME LONG URI]
+          accessConfigs:
+            - name: External NAT
+              type: ONE_TO_ONE_NAT
