@@ -6,7 +6,6 @@
 
 sudo apt-get update
 sudo apt-get install \
-    git \
     ruby-dev \
     build-essential \
     libmysqlclient-dev \
