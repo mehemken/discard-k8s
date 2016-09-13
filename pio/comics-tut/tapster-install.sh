@@ -41,5 +41,5 @@ rake import:episodes
 # Run the app server in the background
 #
 
-rails server -d
+rails server -d -p 8080
 

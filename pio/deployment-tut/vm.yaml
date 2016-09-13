@@ -1,6 +1,6 @@
 resources:
-- type: compute.v1.instance
-  name: vm-my-first-deployment
+- name: foobar
+  type: compute.v1.instance
   properties:
     zone: us-west1-b
     machineType: https://www.googleapis.com/compute/v1/projects/pioml-141022/zones/us-west1-b/machineTypes/f1-micro
@@ -10,10 +10,11 @@ resources:
       boot: true
       autoDelete: true
       initializeParams:
-        sourceImage: https://www.googleapis.com/compute/v1/projects/ubuntu-os-cloud/global/images/ubuntu-1604-lts
+        sourceImage: https://www.googleapis.com/compute/v1/projects/ubuntu-os-cloud/global/images/ubuntu-1604-xenial-v20160907a
     networkInterfaces:
     - network: https://www.googleapis.com/compute/v1/projects/pioml-141022/global/networks/default
       # Access Config required to give the instance a public IP address
       accessConfigs:
       - name: External NAT
         type: ONE_TO_ONE_NAT
+
