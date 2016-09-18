@@ -40,5 +40,6 @@ rake import:episodes
 # Run the app server in the background
 #
 
-rails server -d -p 8080
+# Comment out this line if you're not running directly in a vm
+# rails server -d -p 8080
 
