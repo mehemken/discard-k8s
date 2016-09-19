@@ -5,14 +5,8 @@
 #
 
 sudo apt-get update
-sudo apt-get install \
-    ruby-dev \
-    build-essential \
-    libmysqlclient-dev \
-    postgresql-client \
-    libpq5 \
-    libpq-dev
-
+sudo apt-get install ruby-dev build-essential libmysqlclient-dev postgresql-client libpq5 libpq-dev
+    
 #
 # This installs RVM so we can get the right version of Ruby
 #
