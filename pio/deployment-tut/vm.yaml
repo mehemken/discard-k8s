@@ -1,5 +1,5 @@
 resources:
-- name: foobar
+- name: nginx-test
   type: compute.v1.instance
   properties:
     zone: us-west1-b

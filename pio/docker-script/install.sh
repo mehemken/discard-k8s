@@ -22,7 +22,7 @@ sudo groupadd docker
 sudo usermod -aG docker mehemken
 
 
-sudo apt-get update
-sudo apt-get install nginx
+# sudo apt-get update
+# sudo apt-get install nginx
 
-sudo service nginx start
+# sudo service nginx start
